@@ -10,11 +10,11 @@ node {
 // Declarative
 pipeline {
 	//agent any
-    agent { docker { image 'maven:3.6.3' } }
+    agent { docker { image 'maven:3.9.4' } }
 	stages{
 		stage('Build'){
 			steps{
-				sh 'maven --version'
+				sh 'mvn --version'
 				echo "Build"
 			}
 		}
